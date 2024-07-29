@@ -1,0 +1,11 @@
+class Solution:
+    def isNumber(self, s: str) -> bool:
+        if 'inf' in s or 'Infinity' in s:
+            return False
+        try:
+            t=float(s)
+            if str(abs(t)) == 'inf':
+                return True
+            return str(abs(int(t))).isnumeric()
+        except:
+            return False
